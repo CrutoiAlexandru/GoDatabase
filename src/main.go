@@ -8,4 +8,3 @@ func main() {
 	commander.CallComms()
 }
 
-//REMOVE SPACES FROM THE TERMINAL INPUT

@@ -16,13 +16,23 @@ func Adder() {
 	}
 }
 
-func Deleter() {
+func Deleter() int{
 	fmt.Printf("Name to delete: ")
 	reader := Scn()
 
-	//delete data from db
-	if reader != "close" {
-		db_commands.DeleteRow(reader)
-		Deleter()
+	//delete all data then return as there are no more commands to be given
+	if reader == "-all" {
+		db_commands.DeleteAll()
+		return 0
 	}
+
+	//delete data from db
+	if reader == "close" {
+		return 0
+	}
+
+	//end of function where if there is no other command given a specific row of db will be deleted
+	db_commands.DeleteRow(reader)
+	Deleter()
+	return 0
 }

@@ -3,7 +3,6 @@ package comms
 import (
 	"bufio"
 	"os"
-	"fmt"
 	"strings"
 )
 
@@ -16,6 +15,5 @@ func Scn() string{
 
 	strim := strings.TrimSpace(s)
 
-	fmt.Println(strim)
-	return s
+	return strim
 }
