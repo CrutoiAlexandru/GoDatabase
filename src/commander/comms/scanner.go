@@ -3,6 +3,8 @@ package comms
 import (
 	"bufio"
 	"os"
+	"fmt"
+	"strings"
 )
 
 func Scn() string{
@@ -12,5 +14,8 @@ func Scn() string{
 
 	s := scanner.Text()
 
+	strim := strings.TrimSpace(s)
+
+	fmt.Println(strim)
 	return s
 }
