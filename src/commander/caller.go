@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-var commands []string = []string{"help","delete", "close", "add"}
+var commands []string = []string{"help", "delete", "close", "add", "show"}
 
 //makes sure if the input is valid or not
 func validator(val string) {
@@ -55,6 +55,11 @@ func CallComms() {
 
 	if input == "delete" {
 		comms.Deleter()
+		CallComms()
+	}
+
+	if input == "show" {
+		comms.Shower()
 		CallComms()
 	}
 }

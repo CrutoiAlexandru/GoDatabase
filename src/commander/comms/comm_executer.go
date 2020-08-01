@@ -36,3 +36,9 @@ func Deleter() int{
 	Deleter()
 	return 0
 }
+
+func Shower() {
+	fmt.Println("These are the names: ")
+
+	db_commands.ShowNames()
+}
