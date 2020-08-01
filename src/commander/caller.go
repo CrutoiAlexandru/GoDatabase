@@ -6,9 +6,11 @@ import (
 	"os"
 )
 
+var commands []string = []string{"help","delete", "close", "add"}
+
+//makes sure if the input is valid or not
 func validator(val string) {
 	input    := val
-	commands := []string{"help","delete", "close", "add"}
 	valid    := false
 
 	for i:=0; i<len(commands); i++ {
@@ -29,9 +31,7 @@ func validator(val string) {
 func CallComms() {
 	fmt.Printf("Input command: ")
 	input    := comms.Scn()
-	commands := []string{"help","delete", "close", "add"}
-	
-	//makes sure if the input is valid or not
+
 	validator(input)
 
 	if input == "help" {
