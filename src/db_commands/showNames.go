@@ -6,6 +6,10 @@ import (
 	"fmt"
 )
 
+type User struct {
+	name string //`json:"name"`
+}
+
 //needs conversion to a string list
 func ShowNames() {
 	//establish db connection
@@ -23,7 +27,17 @@ func ShowNames() {
 		panic(err.Error())
 	}
 
-	fmt.Println(pickup)
+	for pickup.Next() {
+		var user User
+
+		err = pickup.Scan(&user.name)
+
+		if err != nil {
+			panic(err.Error())
+		}
+
+		fmt.Println(user.name)
+	}
 
 	defer pickup.Close()
 }
