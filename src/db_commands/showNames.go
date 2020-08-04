@@ -29,7 +29,7 @@ func ShowNames() {
 			panic(err.Error())
 		}
 
-		fmt.Println(user.name)
+		fmt.Println("	"+user.name)
 	}
 
 	defer pickup.Close()

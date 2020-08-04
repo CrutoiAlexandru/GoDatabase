@@ -9,4 +9,3 @@ func main() {
 }
 
 //create id for each user/ FIX FOR DELETIONS
-//make names unrepeatable
