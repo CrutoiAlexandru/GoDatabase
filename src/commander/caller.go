@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-var commands []string = []string{"help", "delete", "close", "add", "show"}
+var commands []string = []string{"help", "delete", "close", "add", "show", "shutdown"}
 
 //makes sure if the input is valid or not
 func validator(val string) {

@@ -8,4 +8,3 @@ func main() {
 	commander.CallComms()
 }
 
-//create id for each user/ FIX FOR DELETIONS
